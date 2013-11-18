@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+}
+
+[class*='cell-'] {
+	font-weight: bold;
+	text-align: center;
+}
+
+[class*='cell-'] p {
+	background: #d00;
+	margin: 0;
+}
+
+section > div {
+	background: #ddd;
+}
+
+section > div > div {
+	background: #bbb;
+}
+
+section > div > div > div {
+	background: #999;
+}
+
+section > div > div > div > div {
+	background: #777;
+}
+
+section > div > div > div > div > div {
+	background: #555;
+}

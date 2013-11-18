@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid Demo Page</title>
+		<link rel="stylesheet" type="text/css" href="../build/grid.min.css" />
+		<link rel="stylesheet" type="text/css" href="example.css" />
+	</head>
+	<body>
+		<h1>Grid Demo Page</h1>
+		<div class="inner row">
+			<em class="cell-s-show">Small</em>
+			<em class="cell-m-show">Medium</em>
+			<em class="cell-l-show">Large</em>
+		</div>
+
+		<section>
+			<h2>Default Grid</h2>
+
+			<section>
+				<h3>Basic 12-Column Grid</h3>
+
+				<div class="row">
+					<div class="cell-1"><p>1</p></div>
+					<div class="cell-1"><p>2</p></div>
+					<div class="cell-1"><p>3</p></div>
+					<div class="cell-1"><p>4</p></div>
+					<div class="cell-1"><p>5</p></div>
+					<div class="cell-1"><p>6</p></div>
+					<div class="cell-1"><p>7</p></div>
+					<div class="cell-1"><p>8</p></div>
+					<div class="cell-1"><p>9</p></div>
+					<div class="cell-1"><p>10</p></div>
+					<div class="cell-1"><p>11</p></div>
+					<div class="cell-1"><p>12</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-2"><p>1-2</p></div>
+					<div class="cell-2"><p>3-4</p></div>
+					<div class="cell-2"><p>5-6</p></div>
+					<div class="cell-2"><p>7-8</p></div>
+					<div class="cell-2"><p>9-10</p></div>
+					<div class="cell-2"><p>11-12</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-3"><p>1-3</p></div>
+					<div class="cell-3"><p>4-6</p></div>
+					<div class="cell-3"><p>7-9</p></div>
+					<div class="cell-3"><p>10-12</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-4"><p>1-4</p></div>
+					<div class="cell-4"><p>5-8</p></div>
+					<div class="cell-4"><p>9-12</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-6"><p>1-6</p></div>
+					<div class="cell-6"><p>7-12</p></div>
+				</div>
+			</section>
+		</section>
+		
+		<section>
+			<h2>Push/Pull and Centered</h2>
+
+			<div class="row">
+				<div class="cell-2"><p>1</p></div>
+				<div class="cell-2"><p>2</p></div>
+				<div class="cell-2 push-2"><p>3 + 1 = 4</p></div>
+				<div class="cell-2 pull-2"><p>4 - 1 = 3</p></div>
+				<div class="cell-2"><p>5</p></div>
+				<div class="cell-2"><p>6</p></div>
+			</div>
+			<div class="row">
+				<div class="cell-2 push-6"><p>1 + 3 = 4</p></div>
+				<div class="cell-2 push-2"><p>2 + 1 = 3</p></div>
+				<div class="cell-2 pull-4"><p>3 - 2 = 1</p></div>
+				<div class="cell-2 push-4"><p>4 + 2 = 6</p></div>
+				<div class="cell-2 pull-6"><p>5 - 3 = 2</p></div>
+				<div class="cell-2 pull-2"><p>6 - 1 = 5</p></div>
+			</div>
+			<div class="row">
+				<div class="cell-2"><p>1</p></div>
+				<div class="cell-2 push-8"><p>2 + 4 == 6</p></div>
+				<div class="cell-4 center"><p>2-3, Center</p></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Responsive Grid</h2>
+
+			<div class="grid-inner">
+				<div class="row">
+					<div class="cell-4 cell-m-12 cell-s-12"><p>Title</p></div>
+					<div class="cell-8 cell-m-12 cell-s-12"><p>Nav</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-3 cell-m-6 cell-s-12"><p>Entry 1</p></div>
+					<div class="cell-3 cell-m-6 cell-s-12"><p>Entry 2</p></div>
+					<div class="cell-3 cell-m-6 cell-s-12"><p>Entry 3</p></div>
+					<div class="cell-3 cell-m-6 cell-s-12"><p>Entry 4</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-3 cell-m-6 cell-s-hide"><p>Entry 5</p></div>
+					<div class="cell-3 cell-m-6 cell-s-hide"><p>Entry 6</p></div>
+					<div class="cell-3 cell-m-hide cell-s-12"><p>Entry 7</p></div>
+					<div class="cell-3 cell-m-hide cell-s-hide"><p>Entry 8</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-3 cell-s-hide"><p>l + m</p></div>
+					<div class="cell-3 cell-m-3 cell-s-6 push-m-3"><p>Left/Right</p></div>
+					<div class="cell-3 cell-m-3 cell-s-6 pull-m-3"><p>Right/Left</p></div>
+					<div class="cell-3 cell-s-hide"><p>l + m</p></div>
+				</div>
+
+				<div class="row">
+					<div class="cell-12 cell-s-show"><p>Small Footer</p></div>
+					<div class="cell-12 cell-m-show"><p>Medium Footer</p></div>
+					<div class="cell-12 cell-l-show"><p>Large Footer</p></div>
+					<div class="cell-12 cell-s-show cell-m-show"><p>Handheld Footer</p></div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Nested Grids</h2>
+
+			<div class="row">
+				<div class="cell-4">
+					<p>One</p>
+					<div class="row inner">
+						<div class="cell-3"><p>1</p></div>
+						<div class="cell-6"><p>2-3</p></div>
+						<div class="cell-3"><p>4</p></div>
+					</div>
+					<div class="row inner">
+						<div class="cell-2"><p>1</p></div>
+						<div class="cell-4"><p>2-3</p></div>
+						<div class="cell-6"><p>4-6</p></div>
+					</div>
+				</div>
+				<div class="cell-4">
+					<p>Two</p>
+					<div class="row inner">
+						<div class="cell-1"><p>1</p></div>
+						<div class="cell-1"><p>2</p></div>
+						<div class="cell-1"><p>3</p></div>
+						<div class="cell-1"><p>4</p></div>
+						<div class="cell-1"><p>5</p></div>
+						<div class="cell-1"><p>6</p></div>
+						<div class="cell-1"><p>7</p></div>
+						<div class="cell-1"><p>8</p></div>
+						<div class="cell-1"><p>9</p></div>
+						<div class="cell-1"><p>10</p></div>
+						<div class="cell-1"><p>11</p></div>
+						<div class="cell-1"><p>12</p></div>
+					</div>
+					<div class="row inner">
+						<div class="cell-1"><p>1</p></div>
+						<div class="cell-1"><p>2</p></div>
+						<div class="cell-1"><p>3</p></div>
+						<div class="cell-1"><p>4</p></div>
+						<div class="cell-1"><p>5</p></div>
+						<div class="cell-1"><p>6</p></div>
+						<div class="cell-1"><p>7</p></div>
+						<div class="cell-1"><p>8</p></div>
+						<div class="cell-1"><p>9</p></div>
+						<div class="cell-1"><p>10</p></div>
+						<div class="cell-1"><p>11</p></div>
+						<div class="cell-1"><p>12</p></div>
+					</div>
+					<div class="row inner">
+						<div class="cell-1"><p>1</p></div>
+						<div class="cell-1"><p>2</p></div>
+						<div class="cell-1"><p>3</p></div>
+						<div class="cell-1"><p>4</p></div>
+						<div class="cell-1"><p>5</p></div>
+						<div class="cell-1"><p>6</p></div>
+						<div class="cell-1"><p>7</p></div>
+						<div class="cell-1"><p>8</p></div>
+						<div class="cell-1"><p>9</p></div>
+						<div class="cell-1"><p>10</p></div>
+						<div class="cell-1"><p>11</p></div>
+						<div class="cell-1"><p>12</p></div>
+					</div>
+				</div>
+				<div class="cell-4">
+					<p>Three</p>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

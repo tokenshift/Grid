@@ -108,7 +108,11 @@ h1 + p, h2 + p, h3 + p, h4 + p {
   margin-top: 0;
 }
 
-section + section, p + section {
+section {
+  margin-bottom: 1em;
+}
+
+p + section {
   margin-top: 1em;
 }
 

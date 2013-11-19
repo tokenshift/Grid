@@ -1,67 +1,9 @@
-$gutter: 10px;
-$breakpoints: s null 767px, m 768px 959px, l 960px null;
-
-/* Row Clearfix */
-
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.row {
-	&:before, &:after {
-		content: " ";
-		display: table;
-	}
-
-	&:after {
-		clear: both;
-	}
-
-	*zoom: 1;
-}
-
-
-/* Grid Cell Styles */
-
-[class*='cell-'] {
-	box-sizing: border-box;
-	display: block;
-	float: left;
-	padding: {
-		left: $gutter;
-		right: $gutter;
-	}
-	position: relative;
-
-	&.center {
-		float: none;
-		margin: {
-			left: auto;
-			right: auto;
-		}
-	}
-}
-
-
-/* Nested Grids */
-
-.inner.row {
-	margin: {
-		left: -$gutter;
-		right: -$gutter;
-	}
-}
-
+@import "settings";
 
 /* Column Definitions */
 
 @mixin grid_columns($columns) {
   @include define_columns($columns);
-
-  // Elements with a '-show' class are hidden by default, unless the relevant
-  // @media query is matched.
-  @each $size in $breakpoints {
-  	.cell-#{nth($size, 1)}-show {
-  		display: none;
-  	}
-  }
 
   @each $size in $breakpoints {
   	$prefix: nth($size, 1);
@@ -71,6 +13,8 @@ $breakpoints: s null 767px, m 768px 959px, l 960px null;
   	@if $low == null {
   		@media only screen and (max-width: $high) {
   			@include define_columns($columns, $prefix);
+
+        
   		}
   	}
 
@@ -90,14 +34,21 @@ $breakpoints: s null 767px, m 768px 959px, l 960px null;
 
 @mixin define_columns($columns, $prefix: null) {
 	@if $prefix {
-		.cell-#{$prefix}-hide {
+		.hide-#{$prefix} {
 			display: none;
 		}
-
-		.cell-#{$prefix}-show {
-			display: block;
-		}
 	}
+  
+  // Hide all other 'show-' elements.
+  @if $prefix {
+    @each $other in $breakpoints {
+      @if nth($other, 1) != $prefix {
+        .show-#{nth($other, 1)} {
+          display: none;
+        }
+      }
+    }
+  }
 
 	@for $i from 1 through $columns {
 		@if $prefix == null {

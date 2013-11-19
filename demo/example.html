@@ -8,11 +8,9 @@
 	</head>
 	<body>
 		<h1>Grid Demo Page</h1>
-		<div class="inner row">
-			<em class="cell-s-show">Small</em>
-			<em class="cell-m-show">Medium</em>
-			<em class="cell-l-show">Large</em>
-		</div>
+		<em class="show-s">Small</em>
+		<em class="show-m">Medium</em>
+		<em class="show-l">Large</em>
 
 		<section>
 			<h2>Default Grid</h2>
@@ -236,24 +234,24 @@
 				</div>
 
 				<div class="row">
-					<div class="cell-3 cell-m-6 cell-s-hide"><p>Entry 5</p></div>
-					<div class="cell-3 cell-m-6 cell-s-hide"><p>Entry 6</p></div>
-					<div class="cell-3 cell-m-hide cell-s-12"><p>Entry 7</p></div>
-					<div class="cell-3 cell-m-hide cell-s-hide"><p>Entry 8</p></div>
+					<div class="cell-3 cell-m-6 hide-s"><p>Entry 5</p></div>
+					<div class="cell-3 cell-m-6 hide-s"><p>Entry 6</p></div>
+					<div class="cell-3 hide-m cell-s-12"><p>Entry 7</p></div>
+					<div class="cell-3 hide-m hide-s"><p>Entry 8</p></div>
 				</div>
 
 				<div class="row">
-					<div class="cell-3 cell-s-hide"><p>l + m</p></div>
+					<div class="cell-3 hide-s"><p>l + m</p></div>
 					<div class="cell-3 cell-m-3 cell-s-6 push-m-3"><p>Left/Right</p></div>
 					<div class="cell-3 cell-m-3 cell-s-6 pull-m-3"><p>Right/Left</p></div>
-					<div class="cell-3 cell-s-hide"><p>l + m</p></div>
+					<div class="cell-3 hide-s"><p>l + m</p></div>
 				</div>
 
 				<div class="row">
-					<div class="cell-12 cell-s-show"><p>Small Footer</p></div>
-					<div class="cell-12 cell-m-show"><p>Medium Footer</p></div>
-					<div class="cell-12 cell-l-show"><p>Large Footer</p></div>
-					<div class="cell-12 cell-s-show cell-m-show"><p>Handheld Footer</p></div>
+					<div class="cell-12 show-s"><p>Small Footer</p></div>
+					<div class="cell-12 show-m"><p>Medium Footer</p></div>
+					<div class="cell-12 show-l"><p>Large Footer</p></div>
+					<div class="cell-12 show-s show-m"><p>Handheld Footer</p></div>
 				</div>
 			</div>
 		</section>

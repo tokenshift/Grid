@@ -1,0 +1,5 @@
+@import "grid";
+
+.grid-16 .row, .row-16 {
+  @include grid_columns(12);
+}

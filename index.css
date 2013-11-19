@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700|Open+Sans:300italic,800);
+
+body {
+  margin: 0;
+}
+
+a, b, strong {
+  font-weight: 700
+}
+
+h1, h2, h3 {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 300%;
+  line-height: 85%;
+  font-weight: 800
+}
+
+h2 {
+  font-size: 150%;
+  font-style: italic;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 100%;
+  font-weight: 800;
+}
+
+p {
+  font-family: "PT Serif", serif;
+  font-size: 16px/20px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+#main {
+  margin: auto;
+  width: 960px;
+}

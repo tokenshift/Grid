@@ -1,0 +1,88 @@
+$gutter: 10px;
+$breakpoints: s null 767px, m 768px 959px, l 960px null;
+
+/* Column Definitions */
+
+@mixin grid_columns($columns) {
+  @include define_columns($columns);
+
+  // Elements with a '-show' class are hidden by default, unless the relevant
+  // @media query is matched.
+  @each $size in $breakpoints {
+  	.cell-#{nth($size, 1)}-show {
+  		display: none;
+  	}
+  }
+
+  @each $size in $breakpoints {
+  	$prefix: nth($size, 1);
+  	$low: nth($size, 2);
+  	$high: nth($size, 3);
+
+  	@if $low == null {
+  		@media only screen and (max-width: $high) {
+  			@include define_columns($columns, $prefix);
+  		}
+  	}
+
+  	@if $low != null and $high != null {
+  		@media only screen and (min-width: $low) and (max-width: $high) {
+  			@include define_columns($columns, $prefix);
+	  	}
+  	}
+
+  	@if $high == null {
+  		@media only screen and (min-width: $low) {
+  			@include define_columns($columns, $prefix);
+  		}
+  	}
+  }
+}
+
+@mixin define_columns($columns, $prefix: null) {
+	@if $prefix {
+		.cell-#{$prefix}-hide {
+			display: none;
+		}
+
+		.cell-#{$prefix}-show {
+			display: block;
+		}
+	}
+
+	@for $i from 1 through $columns {
+		@if $prefix == null {
+			.cell-#{$i} {
+				width: 100% / $columns * $i;
+			}
+		}
+
+		@if $prefix {
+			.cell-#{$prefix}-#{$i} {
+				width: 100% / $columns * $i;
+			}
+		}
+	}
+
+	@for $i from 1 to $columns {
+		@if $prefix == null {
+			.push-#{$i} { 
+				left: 100% / $columns * $i;
+			}
+
+			.pull-#{$i} {
+				left: -100% / $columns * $i;
+			}
+		}
+
+		@if $prefix != null {
+			.push-#{$prefix}-#{$i} { 
+				left: 100% / $columns * $i;
+			}
+
+			.pull-#{$prefix}-#{$i} {
+				left: -100% / $columns * $i;
+			}
+		}
+	}
+}

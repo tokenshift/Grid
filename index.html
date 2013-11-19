@@ -15,6 +15,11 @@
         <div class="cell-12">
           <h1>Grid</h1>
           <h2>Small, simple, powerful</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell-12">
           <p>
             <b>Grid</b> is a simple, easy-to-use responsive CSS grid system that
             enables you to tailor your content to multiple devices.
@@ -40,18 +45,83 @@
           </p>
           <p>
             To show or hide an element when at a specific size, use the
-            <code>X-show</code> and <code>X-hide</code> classes, where <b>X</b>
-            is the relevant size prefix. Elements marked as <code>X-show</code>
-            will be displayed <em>only</em> at the specified size; elements
-            with <code>X-hide</code> will be displayed at every size
-            <em>except</em> the one specified.
+            <code>.X-show</code> and <code.>X-hide</code> classes, where
+            <b>X</b> is the relevant size prefix. Elements marked as
+            <code>.X-show</code> will be displayed <em>only</em> at the
+            specified size; elements with <code>.X-hide</code> will be
+            displayed at every size <em>except</em> the one specified.
           </p>
         </aside>
 
-        <section class="cell-8 cell-s-12 pull-m-4 pull-l-4">
-          <h3>Usage</h3>
-          <p>Lorem ipsum dolor <a href="javascript:;">sit amet</a> consectetur dolorem...</p>
-        </section>
+        <div class="cell-8 cell-s-12 pull-m-4 pull-l-4">
+          <section id="usage">
+            <h3>Usage</h3>
+            <p>
+              Unlike some grid systems, <b>Grid</b> does not define a container
+              size. Instead, rows will expand to fill the available space. This
+              allows you to use <b>Grid</b> for an entire page, a page
+              container, or even a single section of a page, as needed.
+            </p>
+
+            <p>
+              There are three different grid types you can use: 12-column, 16-
+              column or 24-column. You can also use <em>overrides</em>
+              (<a href="#overrides">see below</a>) if you need different grid
+              types in different places. This page uses a 12-column grid,
+              defined in <code>grid-12.css</code>.
+            </p>
+
+            <p>
+              <em>Rows</em> are defined using the <code>.row</code> class. Use
+              rows to horizontally align a set of components. Inside each row,
+              mark blocks as <code>.cell-1</code> through <code>.cell-12</code>
+              to configure how many columns that cell will consume.
+            </p>
+
+            <section id="push-pull">
+              <h4>Push/Pull</h4>
+
+              <p>
+                You can use <code>.push-</code> and <code>.pull-</code> classes
+                to reorder the visual display of cells in a row. For example,
+                <code>.push-2</code> applied to a cell will move it two columns
+                to the right. <em>Push</em> and <em>pull</em> will often be
+                used in pairs, to swap cell positions, but can also be used to
+                create row-level indentation.
+              </p>
+            </section>
+
+            <section id="centered">
+              <h4>Centered</h4>
+
+              <p>
+                The <code>.center</code> class can be applied to a cell of any
+                size to center the cell in the row. It works best if the
+                centered cell is the only content of the row; if there are any
+                other cells, they should be defined before the centered cell,
+                and <a href="#push-pull">pushed/pulled</a> into the correct
+                position.
+              </p>
+            </section>
+
+            <section id="nesting">
+              <h4>Nesting</h4>
+            </section>
+
+            <section id="responsive">
+              <h4>Responsive</h4>
+            </section>
+          </section>
+
+          <section id="overrides">
+            <h3>Overrides</h3>
+          </section>
+
+          <section id="support">
+            <h3>Support</h3>
+            <p>IE 8+</p>
+          </section>
+        </div>
       </div>
     </div>
   </body>

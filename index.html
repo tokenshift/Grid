@@ -3,7 +3,7 @@
   <head>
     <title>Grid</title>
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:800|PT+Serif:400,700|Open+Sans:300italic,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:800|PT+Serif:400,700|Open+Sans:400,600,800' rel='stylesheet' type='text/css' />
 
     <link rel="stylesheet" type="text/css" href="grid-12.css" />
     <link rel="stylesheet" type="text/css" href="grid-16-override.css" />
@@ -23,20 +23,35 @@
       </div>
 
       <div class="row">
-        <section class="cell-8">
-          <h3>Usage</h3>
-          <p>Lorem ipsum dolor sit amet consectetur dolorem...</p>
-        </section>
-
-        <aside class="cell-4">
+        <aside class="cell-4 cell-s-12 push-m-8 push-l-8">
           <h3>Screen Sizes</h3>
           <p>
             You are viewing this page on a
-            <strong class="cell-s-show">small</strong>
-            <strong class="cell-m-show">medium</strong>
-            <strong class="cell-l-show">large</strong>
+            <strong class="show-s">small</strong>
+            <strong class="show-m">medium</strong>
+            <strong class="show-l">large</strong>
             screen.
           </p>
+          <p>
+            <b>Grid</b> supports three different screen sizes, identified by a
+            single-character prefix: <b>s</b>mall, <b>m</b>edium or
+            <b>l</b>arge. You can think of these as corresponding to
+            <em>mobile</em>, <em>tablet</em> and <em>desktop</em> respectively.       
+          </p>
+          <p>
+            To show or hide an element when at a specific size, use the
+            <code>X-show</code> and <code>X-hide</code> classes, where <b>X</b>
+            is the relevant size prefix. Elements marked as <code>X-show</code>
+            will be displayed <em>only</em> at the specified size; elements
+            with <code>X-hide</code> will be displayed at every size
+            <em>except</em> the one specified.
+          </p>
+        </aside>
+
+        <section class="cell-8 cell-s-12 pull-m-4 pull-l-4">
+          <h3>Usage</h3>
+          <p>Lorem ipsum dolor <a href="javascript:;">sit amet</a> consectetur dolorem...</p>
+        </section>
       </div>
     </div>
   </body>

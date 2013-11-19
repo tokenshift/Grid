@@ -3,130 +3,152 @@
   <head>
     <title>Grid</title>
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:800|PT+Serif:400,700|PT+Mono|Open+Sans:400,600,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:800|PT+Serif:400,700|PT+Mono|Open+Sans:300,400,600,800' rel='stylesheet' type='text/css' />
 
     <link rel="stylesheet" type="text/css" href="grid-12.css" />
     <link rel="stylesheet" type="text/css" href="grid-16-override.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    <div id="main">
-      <div class="row">
-        <div class="cell-12">
-          <h1>Grid</h1>
-          <h2>Small, simple, powerful</h2>
+    <div id="page">
+      <header class="row">  
+        <div class="container">
+          <div class="cell-12">
+            <h1>Grid</h1>
+            <h2>Small, simple, powerful</h2>
+
+            <p>
+              A simple, responsive CSS grid that enables you to easily
+              tailor your content to multiple devices.
+            </p>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <div class="row">
-        <div class="cell-12">
-          <p>
-            <b>Grid</b> is a simple, easy-to-use responsive CSS grid system that
-            enables you to tailor your content to multiple devices.
-          </p>
-        </div>
-      </div>
-
-      <div class="row">
-        <aside class="cell-4 cell-s-12 push-m-8 push-l-8">
-          <h3>Screen Sizes</h3>
-          <p>
-            You are viewing this page on a
-            <strong class="show-s">small</strong>
-            <strong class="show-m">medium</strong>
-            <strong class="show-l">large</strong>
-            screen.
-          </p>
-          <p>
-            <b>Grid</b> supports three different screen sizes, identified by a
-            single-character prefix: <b>s</b>mall, <b>m</b>edium or
-            <b>l</b>arge. You can think of these as corresponding to
-            <em>mobile</em>, <em>tablet</em> and <em>desktop</em> respectively.       
-          </p>
-          <p>
-            To show or hide an element when at a specific size, use the
-            <code>.X-show</code> and <code.>X-hide</code> classes, where
-            <b>X</b> is the relevant size prefix. Elements marked as
-            <code>.X-show</code> will be displayed <em>only</em> at the
-            specified size; elements with <code>.X-hide</code> will be
-            displayed at every size <em>except</em> the one specified.
-          </p>
-        </aside>
-
-        <div class="cell-8 cell-s-12 pull-m-4 pull-l-4">
-          <section id="usage">
-            <h3>Usage</h3>
+      <div class="container">
+        <div class="row">
+          <aside id="screen-sizes" class="cell-4 cell-s-12 push-m-8 push-l-8">
+            <h3>Screen Sizes</h3>
             <p>
-              Unlike some grid systems, <b>Grid</b> does not define a container
-              size. Instead, rows will expand to fill the available space. This
-              allows you to use <b>Grid</b> for an entire page, a page
-              container, or even a single section of a page, as needed.
+              You are viewing this page on a
+              <strong class="show-s">small</strong>
+              <strong class="show-m">medium</strong>
+              <strong class="show-l">large</strong>
+              screen.
             </p>
-
             <p>
-              There are three different grid types you can use: 12-column, 16-
-              column or 24-column. You can also use <em>overrides</em>
-              (<a href="#overrides">see below</a>) if you need different grid
-              types in different places. This page uses a 12-column grid,
-              defined in <code>grid-12.css</code>.
+              <b>Grid</b> supports three different screen sizes, identified by a
+              single-character prefix: <b>s</b>mall, <b>m</b>edium or
+              <b>l</b>arge. You can think of these as corresponding to
+              <em>mobile</em>, <em>tablet</em> and <em>desktop</em> respectively.       
             </p>
-
             <p>
-              <em>Rows</em> are defined using the <code>.row</code> class. Use
-              rows to horizontally align a set of components. Inside each row,
-              mark blocks as <code>.cell-1</code> through <code>.cell-12</code>
-              to configure how many columns that cell will consume.
+              To show or hide an element when at a specific size, use the
+              <code>.X-show</code> and <code>.X-hide</code> classes, where
+              <b>X</b> is the relevant size prefix. Elements marked as
+              <code>.X-show</code> will be displayed <em>only</em> at the
+              specified size; elements with <code>.X-hide</code> will be
+              displayed at every size <em>except</em> the one specified.
             </p>
-
-            <section id="push-pull">
-              <h4>Push/Pull</h4>
-
+          </aside>
+  
+          <div class="cell-8 cell-s-12 pull-m-4 pull-l-4">
+            <section id="usage">
+              <h3>Usage</h3>
               <p>
-                You can use <code>.push-</code> and <code>.pull-</code> classes
-                to reorder the visual display of cells in a row. For example,
-                <code>.push-2</code> applied to a cell will move it two columns
-                to the right. <em>Push</em> and <em>pull</em> will often be
-                used in pairs, to swap cell positions, but can also be used to
-                create row-level indentation.
+                Unlike some grid systems, <b>Grid</b> does not define a container
+                size. Instead, rows will expand to fill the available space. This
+                allows you to use <b>Grid</b> for an entire page, a page
+                container, or even a single section of a page, as needed.
               </p>
-            </section>
-
-            <section id="centered">
-              <h4>Centered</h4>
-
+  
               <p>
-                The <code>.center</code> class can be applied to a cell of any
-                size to center the cell in the row. It works best if the
-                centered cell is the only content of the row; if there are any
-                other cells, they should be defined before the centered cell,
-                and <a href="#push-pull">pushed/pulled</a> into the correct
-                position.
+                There are three different grid types you can use: 12-column, 16-
+                column or 24-column. You can also use <em>overrides</em>
+                (<a href="#overrides">see below</a>) if you need different grid
+                types in different places. This page uses a 12-column grid,
+                defined in <code>grid-12.css</code>.
               </p>
-            </section>
-
-            <section id="nesting">
-              <h4>Nesting</h4>
-
+  
               <p>
-                Grids can be nested to arbitrary depth; just put a
-                <code>.row</code> inside another <code>.row</code>. To remove
-                the outer margin, add the <code>.inner</code> class to the row.
+                <em>Rows</em> are defined using the <code>.row</code> class. Use
+                rows to horizontally align a set of components. Inside each row,
+                mark blocks as <code>.cell-1</code> through <code>.cell-12</code>
+                to configure how many columns that cell will consume.
               </p>
+  
+              <section id="push-pull">
+                <h4>Push/Pull</h4>
+  
+                <p>
+                  You can use <code>.push-</code> and <code>.pull-</code> classes
+                  to reorder the visual display of cells in a row. For example,
+                  <code>.push-2</code> applied to a cell will move it two columns
+                  to the right. <em>Push</em> and <em>pull</em> will often be
+                  used in pairs, to swap cell positions, but can also be used to
+                  create row-level indentation.
+                </p>
+              </section>
+  
+              <section id="centered">
+                <h4>Centered</h4>
+  
+                <p>
+                  The <code>.center</code> class can be applied to a cell of any
+                  size to center the cell in the row. It works best if the
+                  centered cell is the only content of the row; if there are any
+                  other cells, they should be defined before the centered cell,
+                  and <a href="#push-pull">pushed/pulled</a> into the correct
+                  position.
+                </p>
+              </section>
+  
+              <section id="nesting">
+                <h4>Nesting</h4>
+  
+                <p>
+                  Grids can be nested to arbitrary depth; just put a
+                  <code>.row</code> inside another <code>.row</code>. To remove
+                  the outer margin, add the <code>.inner</code> class to the row.
+                </p>
+              </section>
+  
+              <section id="responsive">
+                <h4>Responsive</h4>
+  
+                <p>
+                  There are screen-size-prefixed versions of all of the normal
+                  <code>.cell-</code>, <code>.push-</code> and
+                  <code>.pull-</code> classes. These can be used to override the
+                  size or position of a cell when at a specific screen size. For
+                  example, a cell could be marked as
+                  <code>.cell-4 .cell-s-12</code> to take up the full width on
+                  small screens, such as mobile phones, or a third of the width
+                  on larger screens.
+                </p>
+                <p>
+                  Each screen size also has <code>.show-</code> and
+                  <code>.hide-</code> classes to display or hide content,
+                  respectively, 
+              </section>
             </section>
-
-            <section id="responsive">
-              <h4>Responsive</h4>
+  
+            <section id="overrides">
+              <h3>Overrides</h3>
             </section>
-          </section>
+  
+            <section id="support">
+              <h3>Support</h3>
+  
+              <p>
+                <b>Grid</b> makes use of the <code>box-sizing</code> CSS
+                attribute in order to keep the size down; unfortunately, this
+                means only IE 8+ is supported.
+              </p>
 
-          <section id="overrides">
-            <h3>Overrides</h3>
-          </section>
-
-          <section id="support">
-            <h3>Support</h3>
-            <p>IE 8+</p>
-          </section>
+              <p>TODO: Test and document cross-browser support.</p>
+            </section>
+          </div>
         </div>
       </div>
     </div>

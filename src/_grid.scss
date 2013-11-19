@@ -13,8 +13,6 @@
   	@if $low == null {
   		@media only screen and (max-width: $high) {
   			@include define_columns($columns, $prefix);
-
-        
   		}
   	}
 

@@ -2,7 +2,7 @@
 
 *Small, simple, powerful CSS grid*
 
-See <tokenshift.github.io/Grid/> for detailed instructions.
+See http://tokenshift.github.io/Grid/ for detailed instructions.
 
 ## Class Reference
 

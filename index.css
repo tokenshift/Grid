@@ -105,10 +105,20 @@ header h2 {
   margin: 0;
 }
 
+header hr {
+  background-color: #a63100;
+  border: none;
+  color: #a63100;
+  height: 3px;
+  margin: 0.2em 0;
+}
+
 header p {
   color: #aaa;
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
+  margin: 0;
+  text-align: left;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 

@@ -21,8 +21,7 @@ a:hover {
 
 aside {
   background: rgba(33, 83, 63, 0.1);
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
+  padding: 0.3em 0.6em;
 }
 
 aside h3 {
@@ -160,4 +159,28 @@ strong {
   margin: auto;
   max-width: 960px;
   min-height: 100%;
+}
+
+#download-link {
+  background: none;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#download-link .button {
+  background: #bf5b30;
+  border-radius: 8px;
+  border-left: 1px solid rgb(223, 173, 151);
+  border-top: 1px solid rgb(223, 173, 151);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#download-link .button:hover {
+  background: #a63100;
 }

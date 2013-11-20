@@ -113,6 +113,10 @@ header hr {
   margin: 0.2em 0;
 }
 
+header .tagline {
+  margin-top: 1.5em;
+}
+
 header p {
   color: #aaa;
   font-family: "Open Sans", sans-serif;

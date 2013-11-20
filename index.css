@@ -21,6 +21,7 @@ a:hover {
 
 aside {
   background: rgba(33, 83, 63, 0.1);
+  margin-bottom: 1em;
   padding: 0.3em 0.6em;
 }
 
@@ -163,7 +164,6 @@ strong {
 
 #download-link {
   background: none;
-  margin-bottom: 1em;
   text-align: center;
 }
 

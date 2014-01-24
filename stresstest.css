@@ -1,0 +1,4 @@
+.container .row > div {
+  background: #ddd;
+  border: 1px solid #000;
+}

@@ -1,5 +1,5 @@
 @import "grid";
 
-.grid-16 .row, .row-16 {
+.grid-24 .row, .row-24 {
   @include grid_columns(24);
 }
